@@ -1,0 +1,14 @@
+---
+- name: Login into docker registry and upload a docker image
+  hosts: 172.31.85.184
+  tasks:
+    - name: Login into docker hub
+      docker_login:
+        username: intelliqit
+        password: intelliqit
+    - name: Push the customised docker image
+      docker_image:
+        name: intelliqit/jenkins6
+        push: true
+        source: pull
+...

@@ -1,0 +1,13 @@
+---
+- name: Download docker images
+  hosts: all
+  tasks:
+    - name: Downlaod images
+      docker_image:
+        name: "{{item}}"
+        source: pull
+      with_items:
+        - tomee
+        - nginx
+        - jenkins/jenkins
+        - ghost
