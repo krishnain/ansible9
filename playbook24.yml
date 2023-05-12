@@ -1,0 +1,9 @@
+---
+- name: Create a file
+  file:
+    name: /tmp/file1
+    state: touch
+    mode: 770
+    owner: root
+    group: root
+...
