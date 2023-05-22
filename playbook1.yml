@@ -1,6 +1,7 @@
 ---
 - name: Create a user
-  hosts: appserver
+  hosts: all
+  serial: 1
   tasks:
     - name: User creation
       user:
